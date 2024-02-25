@@ -1,0 +1,77 @@
+0 verbose cli /opt/homebrew/Cellar/node/21.5.0/bin/node /opt/homebrew/bin/npm
+1 info using npm@10.4.0
+2 info using node@v21.5.0
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 0ms
+5 timing config:load:file:/opt/homebrew/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 1ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:/Users/bogdansavisev/Desktop/olx_prodaetsa_vse /olx0/.npmrc Completed in 0ms
+10 timing config:load:project Completed in 1ms
+11 timing config:load:file:/Users/bogdansavisev/.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:/opt/homebrew/etc/npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:setEnvs Completed in 0ms
+16 timing config:load Completed in 4ms
+17 timing npm:load:configload Completed in 4ms
+18 timing config:load:flatten Completed in 1ms
+19 timing npm:load:mkdirpcache Completed in 0ms
+20 timing npm:load:mkdirplogs Completed in 1ms
+21 verbose title npm i @rollup/rollup-linux-x64-musl @nx/nx-linux-x64-musl
+22 verbose argv "i" "@rollup/rollup-linux-x64-musl" "@nx/nx-linux-x64-musl" "--cache" ".npm" "--prefer-offline"
+23 timing npm:load:setTitle Completed in 2ms
+24 timing npm:load:display Completed in 0ms
+25 verbose logfile logs-max:10 dir:/Users/bogdansavisev/Desktop/olx_prodaetsa_vse /olx0/.npm/_logs/2024-02-16T09_52_52_816Z-
+26 verbose logfile /Users/bogdansavisev/Desktop/olx_prodaetsa_vse /olx0/.npm/_logs/2024-02-16T09_52_52_816Z-debug-0.log
+27 timing npm:load:logFile Completed in 4ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 19ms
+31 timing arborist:ctor Completed in 1ms
+32 silly logfile done cleaning log files
+33 timing idealTree:init Completed in 152ms
+34 timing idealTree:userRequests Completed in 0ms
+35 silly idealTree buildDeps
+36 silly fetch manifest @rollup/rollup-linux-x64-musl@*
+37 timing arborist:ctor Completed in 0ms
+38 http fetch GET 200 https://registry.npmjs.org/@rollup%2frollup-linux-x64-musl 1482ms (cache miss)
+39 silly fetch manifest @nx/nx-linux-x64-musl@*
+40 http fetch GET 200 https://registry.npmjs.org/@nx%2fnx-linux-x64-musl 1401ms (cache miss)
+41 silly placeDep ROOT @nx/nx-linux-x64-musl@18.0.4 OK for: olx0@0.0.0 want: *
+42 silly placeDep ROOT @rollup/rollup-linux-x64-musl@4.11.0 REPLACE for: olx0@0.0.0 want: *
+43 timing idealTree:#root Completed in 2899ms
+44 timing idealTree:node_modules/@nx/nx-linux-x64-musl Completed in 0ms
+45 timing idealTree:node_modules/@rollup/rollup-linux-x64-musl Completed in 0ms
+46 timing idealTree:buildDeps Completed in 2901ms
+47 timing idealTree:fixDepFlags Completed in 4ms
+48 timing idealTree Completed in 3065ms
+49 timing command:i Completed in 3068ms
+50 verbose stack Error: Unsupported platform
+50 verbose stack     at checkPlatform (/opt/homebrew/lib/node_modules/npm/node_modules/npm-install-checks/lib/index.js:55:25)
+50 verbose stack     at #checkEngineAndPlatform (/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:246:9)
+50 verbose stack     at Arborist.buildIdealTree (/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:221:41)
+50 verbose stack     at async Promise.all (index 1)
+50 verbose stack     at async Arborist.reify (/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:160:5)
+50 verbose stack     at async Install.exec (/opt/homebrew/lib/node_modules/npm/lib/commands/install.js:153:5)
+50 verbose stack     at async module.exports (/opt/homebrew/lib/node_modules/npm/lib/cli-entry.js:61:5)
+51 verbose pkgid @nx/nx-linux-x64-musl@18.0.4
+52 verbose cwd /Users/bogdansavisev/Desktop/olx_prodaetsa_vse /olx0
+53 verbose Darwin 23.2.0
+54 verbose node v21.5.0
+55 verbose npm  v10.4.0
+56 error code EBADPLATFORM
+57 error notsup Unsupported platform for @nx/nx-linux-x64-musl@18.0.4: wanted {"os":"linux","cpu":"x64","libc":"musl"} (current: {"os":"darwin","cpu":"arm64","libc":null})
+58 error notsup Valid os:    linux
+58 error notsup Actual os:   darwin
+58 error notsup Valid cpu:   x64
+58 error notsup Actual cpu:  arm64
+58 error notsup Valid libc:  musl
+58 error notsup Actual libc: null
+59 verbose exit 1
+60 timing npm Completed in 3203ms
+61 verbose unfinished npm timer reify 1708077172953
+62 verbose unfinished npm timer reify:loadTrees 1708077172954
+63 verbose code 1
+64 error A complete log of this run can be found in: /Users/bogdansavisev/Desktop/olx_prodaetsa_vse /olx0/.npm/_logs/2024-02-16T09_52_52_816Z-debug-0.log

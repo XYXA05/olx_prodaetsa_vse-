@@ -1,0 +1,35 @@
+.sector0{
+    margin: 86px 0px 110px 66px;
+    max-width: 420px;
+    max-height: 500px;
+    background-color: rgb(47, 47, 64);
+}
+.form0{
+    display: table-caption;
+    margin: 0px 0px 0px 135px
+}
+.sector1{
+    display: grid;
+    margin: 86px 0px 110px 66px;
+    max-width: 420px;
+    max-height: 500px;
+    background-color: rgb(237, 237, 237);
+    justify-content: center;
+}
+.form-controler {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+  }
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+#webgl {
+    height: 100vh;
+    width: 100vw;
+  }
+.divs1{
+  display: flex;
+  flex-wrap: nowrap;
+}

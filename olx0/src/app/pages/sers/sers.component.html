@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="btn btn-primary" (click)="showFormPost()">
+      <span *ngIf="!showForm">+</span>
+      <span *ngIf="showForm">-</span>
+    </button>
+    <a routerLink="/analiz/">
+      <button class="btn btn-primary">
+        <h5 class="text-white">ANALIZ</h5>
+      </button>
+    </a>
+
+  </nav>
+</div>
+<div>
+  <form [@formAnimation] *ngIf="showForm" class="sector0 form-controler" (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label for="model">MODEL</label>
+      <input type="text" class="form-control" id="model" [(ngModel)]="model" name="model" placeholder="Enter Model Iphone">
+    </div>
+    <div class="form-group">
+      <label for="price_hight">price_hight</label>
+      <input type="text" class="form-control" id="price_hight" [(ngModel)]="price_hight" name="price_hight" placeholder="Enter Price Height">
+    </div>
+    <div class="form-group">
+      <label for="price_low">price_low</label>
+      <input type="text" class="form-control" id="price_low" [(ngModel)]="price_low" name="price_low" placeholder="Enter Price Low">
+    </div>
+    <div class="form-group">
+      <label for="use">time</label>
+      <input type="text" class="form-control" id="use" [(ngModel)]="use" name="use" placeholder="Enter use or not use">
+    </div>
+    <div class="form-group">
+      <label for="city">city</label>
+      <input type="text" class="form-control" id="city" [(ngModel)]="city" name="city" placeholder="Enter City">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<div class="divs1">
+  <div class="sector1" *ngFor="let data of jsonData">
+    <form class="sector2" [formGroup]="updateForm" (ngSubmit)="putMethod(data.id)" style="width: 372px;">
+      <iframe *ngIf="iframeUrls[data.id]" [src]="iframeUrls[data.id]" width="372" frameborder="0"></iframe>
+      <div class="form-group">
+        <label for="exampleInputEmail1">{{ data.model }}</label>
+        <input *ngIf="showModelInput && !showForm" type="text" class="form-control" id="model" formControlName="model">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">{{ data.price_hight }}</label>
+        <input *ngIf="showModelInput && !showForm" type="number" class="form-control" id="price_hight" formControlName="price_hight">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">{{ data.price_low }}</label>
+        <input *ngIf="showModelInput && !showForm" type="number" class="form-control" id="price_low" formControlName="price_low">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">{{ data.use }}</label>
+        <input *ngIf="showModelInput && !showForm" type="number" class="form-control" id="use" formControlName="use">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">{{ data.city }}</label>
+        <input *ngIf="showModelInput && !showForm" type="text" class="form-control" id="city" formControlName="city" >
+      </div>
+    </form>
+      <div style="width: 372px;">
+      <button type="submit" class="btn btn-primary" (click)="putMethod(data.id)" >Post</button>
+      <button type="submit" class="btn btn-primary" (click)="deleteMethod(data.id)">Dalite</button>
+      <button type="submit" class="btn btn-primary" (click)="runAction(data.id)">Start</button>
+      <button type="submit" class="btn btn-primary" (click)="stopAction(data.id)">Stop</button>
+      <button type="button" class="btn btn-primary" (click)="toggleFormElements()">Show change</button>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+

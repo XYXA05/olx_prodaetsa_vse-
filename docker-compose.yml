@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: . 
+      dockerfile: DockerFile.fastapi
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/backend
+
+  frontend:
+    build:
+      context: . 
+      dockerfile: DockerFile.angular
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./olx0:/olx0
+
+
+
+  
